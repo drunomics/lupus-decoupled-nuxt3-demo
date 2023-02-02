@@ -1,4 +1,4 @@
-# Lupus Decoupled Nuxt.js Demo
+# Lupus Decoupled Nuxt 3 Demo
 
 A demo setup for testing https://www.drupal.org/project/lupus_decoupled
 
@@ -8,7 +8,7 @@ This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-dru
 
 ## Try it
 
-* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo?file=nuxt.config.ts)
+* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo/tree/main?file=nuxt.config.ts)
 
 * Or clone the repo and launch it locally.
 
