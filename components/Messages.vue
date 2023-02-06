@@ -17,7 +17,8 @@
 </template>
 
 <script setup>
-const messages = useDrupalCeMessages()
+const { getMessages } = useDrupalCe()
+const messages = getMessages()
 const dismiss = (id) => messages.value.splice(id, 1)
 </script>
 
