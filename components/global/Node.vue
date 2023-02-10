@@ -1,16 +1,17 @@
 <template>
   <div class="node">
-    <h2>{{ title }}</h2>
+    <h2>Title: {{ title }}</h2>
+    <div v-if="image" v-html="image.content" />
     <div v-if="body" v-html="body" />
   </div>
 </template>
 
-<script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true
-  },
-  body: String
-})
-</script>
+<script setup lang="ts">
+const props = defineProps<{
+  title: String;
+  type: String;
+  created: Integer;
+  body?: String[];
+  image?: Object;
+}>();
+</script>a
