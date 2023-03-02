@@ -8,9 +8,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.1.0"
+    "nuxt": "^3.2.3"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "^2.0.0-alpha3"
+    "nuxtjs-drupal-ce": "^2.0.0-alpha4"
   }
 }
