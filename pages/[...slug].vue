@@ -1,7 +1,5 @@
 <template>
   <div>
-    <MainNavigation />
-    <Messages />
     <Breadcrumbs />
     <DrupalTabs v-if="page.local_tasks" :tabs="page.local_tasks" />
     <component :is="renderCustomElements(page.content)" />

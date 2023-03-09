@@ -1,6 +1,7 @@
 <template>
   <div class="breadcrumbs">
     <span
+      v-if="page"
       v-for="(crumb, index) in page.breadcrumbs"
       :key="index"
       :url="crumb.url"
