@@ -14,4 +14,4 @@ const props = defineProps<{
   body?: String[];
   image?: Object;
 }>();
-</script>a
+</script>
