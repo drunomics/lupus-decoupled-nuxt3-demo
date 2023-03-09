@@ -1,5 +1,5 @@
 <template>
-  <div class="node">
+  <div class="node prose">
     <h2>Title: {{ title }}</h2>
     <div v-if="image" v-html="image.content" />
     <div v-if="body" v-html="body" />
@@ -14,4 +14,4 @@ const props = defineProps<{
   body?: String[];
   image?: Object;
 }>();
-</script>a
+</script>
