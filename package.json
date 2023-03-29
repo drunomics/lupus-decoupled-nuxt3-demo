@@ -11,6 +11,6 @@
     "nuxt": "^3.2.3"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "^2.0.0-alpha7"
+    "nuxtjs-drupal-ce": "^2.0.0-alpha9"
   }
 }
