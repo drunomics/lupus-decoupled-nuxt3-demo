@@ -5,7 +5,7 @@
         class="tabs primary"
     >
       <li v-for="tab in tabs.primary" :key="tab.url">
-        <a
+        <nuxt-link
             :href="tab.url"
             tabindex="-1"
             :class="{'is-active': tab.active}"
@@ -14,7 +14,7 @@
           <span v-if="tab.active" class="visually-hidden">
             (active tab)
           </span>
-        </a>
+        </nuxt-link>
       </li>
     </ul>
   </div>
