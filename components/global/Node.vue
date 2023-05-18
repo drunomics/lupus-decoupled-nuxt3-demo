@@ -10,7 +10,7 @@
 const props = defineProps<{
   title: String;
   type: String;
-  created: Integer;
+  created: Number;
   body?: String[];
   image?: Object;
 }>();

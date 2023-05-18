@@ -1,14 +1,14 @@
 <template>
   <div class="drupal-tabs">
     <ul
-        v-if="tabs.primary"
-        class="tabs primary"
+      v-if="tabs.primary"
+      class="tabs primary"
     >
       <li v-for="tab in tabs.primary" :key="tab.url">
         <nuxt-link
-            :href="tab.url"
-            tabindex="-1"
-            :class="{'is-active': tab.active}"
+          :href="tab.url"
+          tabindex="-1"
+          :class="{'is-active': tab.active}"
         >
           {{ tab.label }}
           <span v-if="tab.active" class="visually-hidden">
@@ -20,15 +20,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    tabs: {
-      type: [Object, Array],
-      required: true
-    }
-  }
-}
+<script setup lang="ts">
+const props = defineProps<{
+  tabs: Object;
+}>()
 </script>
 
 <style lang="css" scoped>
