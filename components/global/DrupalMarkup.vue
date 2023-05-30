@@ -1,13 +1,9 @@
 <template>
-  <div v-html="content">
-  </div>
+  <div v-html="content" />
 </template>
 
-<script setup>
-defineProps({
-  content: {
-    type: String,
-    required: true
-  },
-})
+<script setup lang="ts">
+const props = defineProps<{
+  content: String;
+}>()
 </script>

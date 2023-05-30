@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumbs />
+    <Breadcrumbs v-if="page.breadcrumbs" />
     <DrupalTabs v-if="page.local_tasks" :tabs="page.local_tasks" />
     <component :is="renderCustomElements(page.content)" />
   </div>

@@ -1,7 +1,6 @@
 <template>
   <div class="breadcrumbs">
     <span
-      v-if="page"
       v-for="(crumb, index) in page.breadcrumbs"
       :key="index"
       :url="crumb.url"
@@ -23,7 +22,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { getPage } = useDrupalCe()
 const page = getPage()
 </script>
