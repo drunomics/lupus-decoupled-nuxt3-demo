@@ -4,7 +4,8 @@ export default defineNuxtConfig({
         'nuxtjs-drupal-ce'
     ],
     drupalCe: {
-        baseURL: process.env.DRUPAL_BASE_URL || 'http://lupus-decoupled.ddev.site/ce-api'
+        baseURL: process.env.DRUPAL_BASE_URL || 'http://lupus-decoupled.ddev.site/ce-api',
+        exposeAPIRouteRules: false,
     },
     nitro: {
         compressPublicAssets: true
