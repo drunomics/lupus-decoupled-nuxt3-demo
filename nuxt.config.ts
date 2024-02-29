@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     ],
     drupalCe: {
         baseURL: process.env.DRUPAL_BASE_URL || 'http://lupus-decoupled.ddev.site/ce-api',
-        exposeAPIRouteRules: false,
+        exposeAPIRouteRules: true,
     },
     nitro: {
         compressPublicAssets: true
