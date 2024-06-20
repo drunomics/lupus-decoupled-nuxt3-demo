@@ -4,7 +4,7 @@
     <input type="hidden" name="target_url" :value="target" />
   </form>
 </template>
-§
+
 <script setup lang="ts">
 const props = defineProps<{
   formId: String,
