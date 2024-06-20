@@ -1,9 +1,10 @@
 <template>
-  <form vue-enabled :formId="formId" :method="method" v-bind="attributes" @submit.prevent="submitForm">
+  <form vue-enabled :formId="formId" :method="method" v-bind="attributes" action="/form-response">
     <slot><div v-html="content"></div></slot>
+    <input type="hidden" name="target_url" :value="target" />
   </form>
 </template>
-
+§
 <script setup lang="ts">
 const props = defineProps<{
   formId: String,
@@ -12,33 +13,6 @@ const props = defineProps<{
   content?: String,
 }>();
 
-const { getPage, getMessages } = useDrupalCe()
-
-const submitForm = async (event) => {
-  const body = new FormData(event.target)
-  body.append('target', event.target.action)
-  const { data, error } = await useFetch('/form-handler', {
-    method: 'POST',
-    body,
-  })
-
-  if (error.value) {
-    getMessages()?.value?.push({
-      type: 'error',
-      message:
-        'There was a problem submitting the form. Try again later or contact the site administrator.',
-    })
-    console.error(error)
-    return
-  }
-
-  const isRedirect = data.value.redirect
-  if (isRedirect) {
-    await navigateTo(isRedirect.url, {
-      external: isRedirect.external,
-    })
-  } else {
-    getPage().value = data.value
-  }
-}
+const match = props.content ? props.content.match(/action="([^"]*)"/) : null
+const target = match ? match[1] : useRoute().path
 </script>
