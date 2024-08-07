@@ -1,5 +1,5 @@
 <template>
-  <form vue-enabled :formId="formId" :method="method" v-bind="attributes" action="/form-response">
+  <form vue-enabled :formId="formId" :method="method" v-bind="attributes" :action="target">
     <slot><div v-html="content"></div></slot>
     <input type="hidden" name="target_url" :value="target" />
   </form>
