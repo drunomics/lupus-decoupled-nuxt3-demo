@@ -1,7 +1,6 @@
 <template>
-  <form vue-enabled :formId="formId" :method="method" v-bind="attributes" action="/form-response">
-    <slot><div v-html="content"></div></slot>
-    <input type="hidden" name="target_url" :value="target" />
+  <form :formId="formId" :method="method" v-bind="attributes" :action="useRoute().fullPath" class="drupal-form">
+    <slot><div v-html="content" /></slot>
   </form>
 </template>
 
@@ -11,8 +10,5 @@ const props = defineProps<{
   attributes: Object,
   method: String,
   content?: String,
-}>();
-
-const match = props.content ? props.content.match(/action="([^"]*)"/) : null
-const target = match ? match[1] : useRoute().path
+}>()
 </script>
