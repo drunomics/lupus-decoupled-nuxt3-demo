@@ -9,8 +9,4 @@
 <script lang="ts" setup>
 const { fetchPage, renderCustomElements } = useDrupalCe()
 const page = await fetchPage(useRoute().path, { query: useRoute().query })
-
-definePageMeta({
-  middleware: 'form-handler',
-})
 </script>
