@@ -1,9 +1,6 @@
 <template>
   <ul class="main-menu">
-    <li
-      v-for="menuItem in mainMenu"
-      :key="menuItem.key"
-    >
+    <li v-for="menuItem in mainMenu" :key="menuItem.key">
       <nuxt-link
         v-if="!menuItem.external"
         class="item"
@@ -22,13 +19,13 @@
 </template>
 
 <script setup lang="ts">
-const { fetchMenu } = useDrupalCe()
-const mainMenu = await fetchMenu('main')
+const { fetchMenu } = useDrupalCe();
+const mainMenu = await fetchMenu("main");
 </script>
 
 <style lang="css" scoped>
 .main-menu {
-  display: flex;
+  display: inline-flex;
   list-style: none;
 }
 

@@ -5,17 +5,10 @@
       :key="index"
       :url="crumb.url"
     >
-      <nuxt-link
-        v-if="crumb.url"
-        class="crumb"
-        :to="crumb.url"
-      >
+      <nuxt-link v-if="crumb.url" class="crumb" :to="crumb.url">
         {{ crumb.label }}
       </nuxt-link>
-      <span
-        v-else
-        class="crumb"
-      >
+      <span v-else class="crumb">
         {{ crumb.label }}
       </span>
     </span>
@@ -23,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-const { getPage } = useDrupalCe()
-const page = getPage()
+const { getPage } = useDrupalCe();
+const page = getPage();
 </script>
 
 <style lang="css" scoped>

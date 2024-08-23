@@ -1,7 +1,7 @@
 <template>
   <div>
-    <MainNavigation />
-    <Messages />
+    <NavigationMain />
+    <SiteMessages />
     <NuxtPage />
   </div>
 </template>
