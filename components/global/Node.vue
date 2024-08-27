@@ -3,6 +3,7 @@
     <h2>Node: {{ title }}</h2>
     <div v-if="image" v-html="image.content" />
     <div v-if="body" v-html="body" />
+    <div v-if="sections" />
   </div>
 </template>
 
@@ -13,5 +14,5 @@ const props = defineProps<{
   created: Number;
   body?: String[];
   image?: Object;
-}>();
+}>()
 </script>

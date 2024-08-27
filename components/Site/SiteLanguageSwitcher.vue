@@ -17,24 +17,24 @@
 </template>
 
 <script setup>
-const { locale, locales, setLocale } = useI18n();
-const { getPage } = useDrupalCe();
+const { locale, locales, setLocale } = useI18n()
+const { getPage } = useDrupalCe()
 
 const availableLocales = computed(() => {
-  return locales.value.filter((i) => i.code !== locale.value);
-});
+  return locales.value.filter(i => i.code !== locale.value)
+})
 
 // Get the path of the translated page from the 'alternate' link in the metatags.
 const alternateLinkPath = (langCode) => {
   const alternateLink = getPage().value.metatags.link.find(
-    (link) => link.rel === "alternate" && link.hreflang === langCode
-  );
+    link => link.rel === 'alternate' && link.hreflang === langCode,
+  )
   if (!alternateLink) {
-    return;
+    return
   }
-  const alternateLinkURL = new URL(alternateLink.href);
-  return alternateLinkURL.pathname;
-};
+  const alternateLinkURL = new URL(alternateLink.href)
+  return alternateLinkURL.pathname
+}
 </script>
 
 <style lang="css" scoped>

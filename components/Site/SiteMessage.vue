@@ -9,15 +9,15 @@ const props = defineProps<{
   type: String;
   id: String;
   message: String;
-}>();
+}>()
 
-const emit = defineEmits(["dismiss"]);
+const emit = defineEmits(['dismiss'])
 
 onMounted(() => {
-  setTimeout(() => dismiss(), 5000);
-});
+  setTimeout(() => dismiss(), 5000)
+})
 
-const dismiss = () => emit("dismiss", props.id);
+const dismiss = () => emit('dismiss', props.id)
 </script>
 
 <style lang="postcss" scoped>

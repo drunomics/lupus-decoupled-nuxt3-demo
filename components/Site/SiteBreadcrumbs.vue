@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-const { getPage } = useDrupalCe();
-const page = getPage();
+const { getPage } = useDrupalCe()
+const page = getPage()
 </script>
 
 <style lang="css" scoped>

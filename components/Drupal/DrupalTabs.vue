@@ -18,7 +18,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   tabs: Object;
-}>();
+}>()
 </script>
 
 <style lang="css" scoped>

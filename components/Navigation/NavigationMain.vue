@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang="ts">
-const { fetchMenu } = useDrupalCe();
-const mainMenu = await fetchMenu("main");
+const { fetchMenu } = useDrupalCe()
+const mainMenu = await fetchMenu('main')
 </script>
 
 <style lang="css" scoped>
