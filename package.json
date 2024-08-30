@@ -5,13 +5,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint . --ext .js,.vue,.ts",
-    "lint-fix": "eslint . --ext .js,.vue,.ts --fix"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "12.1.0",
-    "eslint": "^8.57.0",
     "nuxt": "^3.12.4"
   },
   "dependencies": {
