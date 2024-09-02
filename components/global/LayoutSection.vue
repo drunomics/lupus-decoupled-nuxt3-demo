@@ -31,5 +31,5 @@ const props = defineProps<{
   second?: Object;
   third?: Object;
   fourth?: Object;
-}>();
+}>()
 </script>

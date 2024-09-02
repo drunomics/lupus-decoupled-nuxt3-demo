@@ -1,9 +1,6 @@
 <template>
   <ul class="main-menu">
-    <li
-      v-for="menuItem in mainMenu"
-      :key="menuItem.key"
-    >
+    <li v-for="menuItem in mainMenu" :key="menuItem.key">
       <nuxt-link
         v-if="!menuItem.external"
         class="item"
@@ -28,7 +25,7 @@ const mainMenu = await fetchMenu('main')
 
 <style lang="css" scoped>
 .main-menu {
-  display: flex;
+  display: inline-flex;
   list-style: none;
 }
 

@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="['message', type]"
-    @click="dismiss"
-  >
+  <div :class="['message', type]" @click="dismiss">
     <div v-html="message" />
   </div>
 </template>
