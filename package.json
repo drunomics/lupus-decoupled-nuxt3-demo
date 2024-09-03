@@ -5,10 +5,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "devDependencies": {
-    "nuxt": "^3.12.4"
+    "@nuxt/eslint": "^0.5.5",
+    "nuxt": "^3.12.4",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "nuxtjs-drupal-ce": "github:drunomics/nuxtjs-drupal-ce#2.x-dist"

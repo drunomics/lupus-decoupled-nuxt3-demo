@@ -23,13 +23,13 @@
 <script setup lang="ts">
 const { renderCustomElements } = useDrupalCe()
 
-const props = defineProps<{
-  layout: String;
-  settings: Object;
-  content?: Object;
-  first?: Object;
-  second?: Object;
-  third?: Object;
-  fourth?: Object;
+defineProps<{
+  layout: string;
+  settings: object;
+  content?: object;
+  first?: object;
+  second?: object;
+  third?: object;
+  fourth?: object;
 }>()
 </script>

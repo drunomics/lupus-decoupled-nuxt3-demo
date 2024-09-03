@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  title: String;
-  rows?: Object[];
-  pager?: Object;
+defineProps<{
+  title: string;
+  rows?: object[];
+  pager?: object;
 }>()
 
 const { renderCustomElements } = useDrupalCe()

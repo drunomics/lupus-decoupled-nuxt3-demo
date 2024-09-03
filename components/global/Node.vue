@@ -10,12 +10,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  title: String;
-  type: String;
-  created: Number;
-  body?: String[];
-  image?: Object;
-  sections?: Object;
+defineProps<{
+  title: string;
+  type: string;
+  created: number | string;
+  body?: string[];
+  image?: object;
+  sections?: object;
 }>()
 </script>

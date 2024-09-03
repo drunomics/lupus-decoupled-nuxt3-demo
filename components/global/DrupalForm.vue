@@ -5,10 +5,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  formId: String,
-  attributes: Object,
-  method: String,
-  content?: String,
+defineProps<{
+  formId: string,
+  attributes: object,
+  method: string,
+  content?: string,
 }>()
 </script>
