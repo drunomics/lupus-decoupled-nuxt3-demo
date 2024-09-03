@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  tabs: Object;
+defineProps<{
+  tabs: object;
 }>()
 </script>
 
