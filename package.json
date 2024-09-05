@@ -11,6 +11,6 @@
     "nuxt": "^3.12.4"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "github:drunomics/nuxtjs-drupal-ce#2.x-dist"
+    "nuxtjs-drupal-ce": "github:drunomics/nuxtjs-drupal-ce#feature/LDP-2575-1-dist"
   }
 }
