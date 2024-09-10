@@ -11,10 +11,10 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.5.5",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.13.1",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "github:drunomics/nuxtjs-drupal-ce#2.x-dist"
+    "nuxtjs-drupal-ce": "^2.1.0"
   }
 }
