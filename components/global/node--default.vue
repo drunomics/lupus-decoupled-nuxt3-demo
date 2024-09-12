@@ -12,7 +12,10 @@
 <script setup lang="ts">
 defineProps<{
   title?: string;
-  type?: string;
+  type: {
+    type: string,
+    default: 'default'
+  },
   created?: number | string;
   body?: string[];
   image?: object;
