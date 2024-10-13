@@ -1,7 +1,7 @@
 <template>
   <div>
-    <NavigationMain />
     <NavigationLogin />
+    <NavigationMain />
     <SiteMessages />
     <div id="main">
       <slot />
