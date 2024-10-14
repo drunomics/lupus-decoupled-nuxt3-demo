@@ -10,7 +10,7 @@
     "lint-fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.5.5",
+    "@nuxt/eslint": "^0.6.0",
     "nuxt": "^3.13.1",
     "typescript": "^5.5.4"
   },
