@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ['nuxtjs-drupal-ce', "@nuxt/eslint"],
 
   drupalCe: {
-    drupalBaseUrl: 'https://8080-drunomics-lupusdecouple-faehnoxmwuu.ws-eu116.gitpod.io',
+    drupalBaseUrl: 'http://lupus-decoupled.ddev.site',
     exposeAPIRouteRules: true,
   },
 
