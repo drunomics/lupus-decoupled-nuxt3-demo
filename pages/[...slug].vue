@@ -11,14 +11,15 @@
 </template>
 
 <script lang="ts" setup>
-const { fetchPage, renderCustomElements, getPageLayout } = useDrupalCe()
-const route = useRoute()
-const page = await fetchPage(route.path, { query: route.query })
-
+const { fetchPage, renderCustomElements } = useDrupalCe()
+const page = await fetchPage(useRoute().path, { query: useRoute().query })
+// Set to false to support custom layouts, using <NuxtLayout> instead.
 definePageMeta({
   layout: getPageLayout(page)
 })
-
+const layout = computed(() => {
+  return page.value.page_layout || 'default'
+})
 useHead({
   title: page.value.title,
   meta: page.value.metatags.meta,
