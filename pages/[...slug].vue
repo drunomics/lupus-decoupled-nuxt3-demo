@@ -12,12 +12,13 @@
 
 <script lang="ts" setup>
 const { fetchPage, renderCustomElements, getPageLayout } = useDrupalCe()
-const route = useRoute()
-const page = await fetchPage(route.path, { query: route.query })
+const page = await fetchPage(useRoute().path, { query: useRoute().query })
 
 definePageMeta({
-  layout: getPageLayout(page)
+  layout: false,
 })
+
+const layout = getPageLayout(page)
 
 useHead({
   title: page.value.title,
