@@ -1,11 +1,11 @@
 <template>
   <div>
     <NavigationMain />
+    <SiteLoginLink />
     <SiteMessages />
     <div id="main">
       <slot />
     </div>
-    <NavigationLogin />
   </div>
 </template>
 
