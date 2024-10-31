@@ -1,11 +1,13 @@
 <template>
   <div>
     <NavigationMain />
-    <SiteLoginLink />
     <SiteMessages />
     <div id="main">
       <slot />
     </div>
+    <footer>
+        <NavigationAccount />
+    </footer>
   </div>
 </template>
 
