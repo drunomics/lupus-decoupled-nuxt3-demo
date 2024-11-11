@@ -1,6 +1,6 @@
-# Lupus Decoupled Nuxt 3 Demo
+# Lupus Decoupled Nuxt 3 Demo Shadcn
 
-A demo setup for testing https://www.drupal.org/project/lupus_decoupled
+A demo setup for testing https://www.drupal.org/project/lupus_decoupled with Shadcn components and Tailwind CSS
 
 ## Overview
 
@@ -8,7 +8,7 @@ This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-dru
 
 ## Try it
 
-* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo/tree/main?file=nuxt.config.ts)
+* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo-shadcn/tree/main?file=nuxt.config.ts)
 
 * Or clone the repo and launch it locally.
 
@@ -17,9 +17,9 @@ This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-dru
 For stackblitz or local setup you'll get some network error until base URLs are set right. To do so:
 
 1. Set the Drupal base URL in `nuxt.config.ts`, e.g. `https://8080-shaal-drupalpod-8m3z0ms7mb6.ws-eu67.gitpod.io`
-   When using a Drupal gitpod/DrupalPod as a backend, make sure to set your environment to "Shared" via the workspace options menu, as found in the dashhboard at https://gitpod.io. That way the frontend can connect to it.
+   When using a Drupal gitpod/DrupalPod as a backend, make sure to set your environment to "Shared" via the workspace options menu, as found in the dashboard at https://gitpod.io. That way the frontend can connect to it.
 2. Set the frontend base URL in Drupal at `/admin/config/system/lupus-decoupled/settings`, e.g. `https://nuxt-starter-wuxxcy--3000.local-corp.webcontainer.io`
-3. Test it. Best add some content nodes and some menu-items pointing to them. /node/1 of the backend is available under /node/1 in the frontend. You should see some naked frontend with menus, breadcrumbs & basic node-content (body field) working.
+3. Test it. Best add some content nodes and some menu-items pointing to them. /node/1 of the backend is available under /node/1 in the frontend. You should see styled frontend with menus, breadcrumbs & basic node-content (body field) working.
 
 
 ## Setup

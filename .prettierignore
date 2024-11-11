@@ -1,0 +1,14 @@
+# Ignore artifacts:
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+# Nuxt build directory
+build/
+public/
+static/
+static/robots.txt
