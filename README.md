@@ -8,6 +8,10 @@ The setup is mostly built upon the [drupal-ce connector](https://github.com/drun
 
 This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-drupal-ce installed and configured.
 
+### Differences vs the [naked demo](https://github.com/drunomics/lupus-decoupled-nuxt3-demo)
+
+It has a nicer layout, mobile menu, styled article content (thanks to [@tailwindcss/typography](https://github.com/tailwindlabs/tailwindcss-typography)), dark mode switch (thanks to [@nuxtjs/color-mode](https://github.com/nuxt-modules/color-mode)) and uses [shadcn-vue](https://github.com/unovue/shadcn-vue) for component library.
+
 ## Try it
 
 * [Launch it with Lupus Decoupled](https://gitpod.io/new/#DP_PROJECT_NAME=lupus_decoupled,DP_ISSUE_BRANCH=1.x,DP_PROJECT_TYPE=project_module,DP_MODULE_VERSION=1.x,DP_CORE_VERSION=10.3,DP_PATCH_FILE=,FRONTEND_REPOSITORY=https%3A%2F%2Fgithub.com%2Fdrunomics%2Flupus-decoupled-nuxt3-demo-shadcn,CUSTOM_ELEMENTS_VERSION=3.*,DP_INSTALL_PROFILE=standard/https://github.com/drunomics/lupus-decoupled-project/tree/main) on Gitpod.io OR
