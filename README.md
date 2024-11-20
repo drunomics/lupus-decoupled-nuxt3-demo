@@ -1,6 +1,7 @@
 # Lupus Decoupled Nuxt 3 Demo
 
-A demo setup for testing https://www.drupal.org/project/lupus_decoupled
+A demo setup with naked skeleton components for https://www.drupal.org/project/lupus_decoupled
+The setup is mostly built upon the [drupal-ce connector](https://github.com/drunomics/nuxtjs-drupal-ce) Nuxt module.
 
 ## Overview
 
@@ -8,9 +9,9 @@ This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-dru
 
 ## Try it
 
-* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo/tree/main?file=nuxt.config.ts)
+* [Launch it with Lupus Decoupled](https://gitpod.io/new/#DP_PROJECT_NAME=lupus_decoupled,DP_ISSUE_BRANCH=1.x,DP_PROJECT_TYPE=project_module,DP_MODULE_VERSION=1.x,DP_PATCH_FILE=,FRONTEND_REPOSITORY=https%3A%2F%2Fgithub.com%2Fdrunomics%2Flupus-decoupled-nuxt3-demo,CUSTOM_ELEMENTS_VERSION=3.*,DP_INSTALL_PROFILE=standard/https://github.com/drunomics/lupus-decoupled-project/tree/main) on Gitpod.io OR
 
-* Or clone the repo and launch it locally.
+* [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo/tree/main?file=nuxt.config.ts) and connect it to a backend (see manual setup steps).
 
 ## Manual setup steps
 
