@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   ],
 
   drupalCe: {
-    drupalBaseUrl: 'http://lupus-decoupled.ddev.site',
+    drupalBaseUrl: 'https://lupus-decoupled.ddev.site',
     exposeAPIRouteRules: true,
   },
 
