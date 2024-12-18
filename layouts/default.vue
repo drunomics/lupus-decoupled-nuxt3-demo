@@ -6,7 +6,7 @@
       <slot />
     </div>
     <footer>
-        <NavigationAccount />
+      <NavigationAccount />
     </footer>
   </div>
 </template>
@@ -14,5 +14,9 @@
 <style>
 #main {
   margin-bottom: 200px;
+}
+
+body {
+  background-color: white;
 }
 </style>
