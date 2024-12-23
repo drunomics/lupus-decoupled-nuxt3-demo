@@ -3,7 +3,7 @@
     class="layout-section"
   >
     <div v-if="content">
-      <component :is="renderCustomElements(content)" />
+      <component :is="renderCustomElements(element)" v-for="(element, index) in content" :key="index" />
     </div>
     <div v-if="first">
       <component :is="renderCustomElements(first)" />

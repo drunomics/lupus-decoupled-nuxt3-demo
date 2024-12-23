@@ -4,7 +4,7 @@
     <div v-if="image" v-html="image.content" />
     <div v-if="body" v-html="body" />
     <div v-if="sections">
-      <component :is="useDrupalCe().renderCustomElements(sections)" />
+      <component :is="useDrupalCe().renderCustomElements(section)" v-for="(section, index) in sections" :key="index" />
     </div>
   </div>
 </template>

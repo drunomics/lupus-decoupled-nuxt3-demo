@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     exposeAPIRouteRules: true,
   },
 
+  css: ['assets/css/custom.css'],
+
   nitro: {
     compressPublicAssets: true,
   },
