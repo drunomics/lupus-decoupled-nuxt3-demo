@@ -1,21 +1,21 @@
 <template>
-  <div>
+  <header>
+    <SiteLanguageSwitcher v-if="useNuxtApp().$i18n" />
     <NavigationMain />
-    <SiteMessages />
-    <div id="main">
-      <slot />
-    </div>
-    <footer>
-      <NavigationAccount />
-    </footer>
-  </div>
+  </header>
+  <SiteMessages />
+  <main id="main">
+    <slot />
+  </main>
+  <footer>
+    <NavigationAccount />
+  </footer>
 </template>
 
 <style>
 #main {
-  margin-bottom: 200px;
+  min-height: 70vh;
 }
-
 body {
   background-color: white;
 }
