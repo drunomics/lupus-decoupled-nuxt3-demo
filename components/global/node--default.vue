@@ -1,21 +1,25 @@
 <template>
   <div class="node">
     <h2 v-if="title">Node: {{ title }}</h2>
-    <div v-if="image" v-html="image.content" />
-    <div v-if="body" v-html="body" />
-    <div v-if="sections">
-      <component :is="useDrupalCe().renderCustomElements(sections)" />
-    </div>
+    <slot name="image">
+      <component :is="useDrupalCe().renderCustomElements($attrs.image)" />
+    </slot>
+    <slot name="body">
+      <component :is="useDrupalCe().renderCustomElements($attrs.body)" />
+    </slot>
   </div>
 </template>
 
 <script setup lang="ts">
+defineSlots<{
+  body();
+  image();
+}>()
 defineProps<{
   title?: string;
   type?: string;
   created?: number | string;
-  body?: string[];
-  image?: object;
+  // Layout-builder support.
   sections?: object;
 }>()
 </script>
