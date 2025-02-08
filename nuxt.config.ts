@@ -27,5 +27,11 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
   },
 
+  vite: {
+    server: {
+      allowedHosts: ['.gitpod.io']
+    }
+  },
+
   compatibilityDate: '2024-09-10',
 })
