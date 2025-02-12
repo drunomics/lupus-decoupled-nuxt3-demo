@@ -21,6 +21,7 @@
  
     --primary: 220.9 39.3% 11%;
     --primary-foreground: 210 20% 98%;
+    --primary-focus: 221 39.3% 9%;
  
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 220.9 39.3% 11%;
@@ -30,6 +31,15 @@
  
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
+ 
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+ 
+    --warning: 38 92% 50%;
+    --warning-foreground: 220.9 39.3% 11%;
+ 
+    --info: 221 83% 53%;
+    --info-foreground: 210 20% 98%;
  
     --ring: 224 71.4% 4.1%;
  
@@ -54,6 +64,7 @@
  
     --primary: 210 20% 98%;
     --primary-foreground: 220.9 39.3% 11%;
+    --primary-focus: 210 20% 90%;
  
     --secondary: 215 27.9% 16.9%;
     --secondary-foreground: 210 20% 98%;
@@ -63,6 +74,15 @@
  
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 20% 98%;
+ 
+    --success: 142 71% 45%;
+    --success-foreground: 210 20% 98%;
+ 
+    --warning: 48 96% 89%;
+    --warning-foreground: 220.9 39.3% 11%;
+ 
+    --info: 221 83% 65%;
+    --info-foreground: 210 20% 98%;
  
     --ring: 216 12.2% 83.9%;
   }
@@ -74,5 +94,56 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply form-input-base;
+  }
+  
+  .form-label {
+    @apply form-label-base;
+  }
+  
+  .form-button {
+    @apply form-button-base;
+  }
+
+  .form-checkbox {
+    @apply form-checkbox-base;
+  }
+
+  .form-radio {
+    @apply form-radio-base;
+  }
+
+  .form-select {
+    @apply form-select-base;
+  }
+
+  .form-textarea {
+    @apply form-textarea-base;
+  }
+
+  .drupal-form {
+    @apply space-y-6 w-full max-w-2xl mx-auto;
+
+    .form-item {
+      @apply space-y-2;
+    }
+
+    .form-item--error-message {
+      @apply text-sm text-destructive mt-1;
+    }
+
+    .description {
+      @apply text-sm text-muted-foreground mt-1;
+    }
+
+    .form-required:after {
+      content: "*";
+      @apply text-destructive ml-1;
+    }
   }
 }

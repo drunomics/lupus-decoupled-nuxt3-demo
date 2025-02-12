@@ -1,5 +1,7 @@
 const animate = require('tailwindcss-animate')
 const typography = require('@tailwindcss/typography')
+const forms = require('@tailwindcss/forms')
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -25,6 +27,7 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          focus: 'hsl(var(--primary-focus))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
@@ -49,6 +52,12 @@ module.exports = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        state: {
+          error: 'hsl(var(--destructive))',
+          success: 'hsl(var(--success))',
+          warning: 'hsl(var(--warning))',
+          info: 'hsl(var(--info))',
         },
       },
       borderRadius: {
@@ -81,7 +90,62 @@ module.exports = {
         'collapsible-down': 'collapsible-down 0.2s ease-in-out',
         'collapsible-up': 'collapsible-up 0.2s ease-in-out',
       },
+      fontFamily: {
+        meta: ['system-ui', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+      },
     },
   },
-  plugins: [animate, typography],
+  plugins: [
+    animate, 
+    typography,
+    forms({
+      strategy: 'class',
+    }),
+    // Custom form components plugin
+    plugin(({ addComponents }) => {
+      addComponents({
+        '.form-input-base': {
+          '@apply w-full px-4 py-2 border rounded-md shadow-sm': {},
+          '@apply border-input bg-background text-foreground': {},
+          '@apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2': {},
+          '@apply disabled:cursor-not-allowed disabled:opacity-50': {},
+          '@apply placeholder:text-muted-foreground': {},
+        },
+        '.form-label-base': {
+          '@apply block text-sm font-medium mb-1.5': {},
+          '@apply text-foreground': {},
+        },
+        '.form-button-base': {
+          '@apply px-4 py-2 text-sm font-medium inline-flex items-center justify-center': {},
+          '@apply bg-primary text-primary-foreground hover:bg-primary/90': {},
+          '@apply rounded-md shadow-sm transition-colors': {},
+          '@apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2': {},
+          '@apply disabled:pointer-events-none disabled:opacity-50': {},
+        },
+        '.form-checkbox-base': {
+          '@apply h-4 w-4 rounded border border-input': {},
+          '@apply text-primary focus:ring-primary': {},
+          '@apply disabled:cursor-not-allowed disabled:opacity-50': {},
+        },
+        '.form-radio-base': {
+          '@apply h-4 w-4 border border-input': {},
+          '@apply text-primary focus:ring-primary': {},
+          '@apply disabled:cursor-not-allowed disabled:opacity-50': {},
+        },
+        '.form-select-base': {
+          '@apply w-full px-4 py-2 border rounded-md shadow-sm': {},
+          '@apply border-input bg-background text-foreground': {},
+          '@apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2': {},
+          '@apply disabled:cursor-not-allowed disabled:opacity-50': {},
+        },
+        '.form-textarea-base': {
+          '@apply w-full px-4 py-2 border rounded-md shadow-sm': {},
+          '@apply border-input bg-background text-foreground': {},
+          '@apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2': {},
+          '@apply disabled:cursor-not-allowed disabled:opacity-50': {},
+          '@apply placeholder:text-muted-foreground': {},
+        },
+      })
+    }),
+  ],
 }
