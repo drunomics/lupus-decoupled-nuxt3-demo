@@ -22,3 +22,20 @@ defineSlots<{
   default();
 }>()
 </script>
+
+<style>
+form {
+  padding: 0 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.325rem;
+}
+
+input {
+  max-width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+</style>
