@@ -24,22 +24,18 @@ defineSlots<{
 </script>
 
 <style>
-.drupal-form {
-  display: flex;
-  flex-direction: column;
+form {
   padding: 0 1rem;
 }
 
-.drupal-form label {
+label {
   display: block;
   margin-bottom: 0.325rem;
 }
 
-.drupal-form input {
+input {
+  max-width: 90%;
   padding: 0.5rem;
-}
-
-.drupal-form .form-item {
   margin-bottom: 0.75rem;
 }
 </style>
