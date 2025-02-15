@@ -9,11 +9,11 @@
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 #main {
   min-height: 70vh;
 }
 body {
-  background-color: white;
+  @apply bg-background;
 }
 </style>
