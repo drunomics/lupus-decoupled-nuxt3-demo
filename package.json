@@ -4,6 +4,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "init-project-files": "nuxt-drupal-ce-init",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

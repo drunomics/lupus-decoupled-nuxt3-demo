@@ -38,6 +38,10 @@ yarn install
 pnpm install
 ```
 
+Add all [initial scaffold files](https://github.com/drunomics/nuxtjs-drupal-ce/tree/2.x/playground):
+
+npm run init-project-files
+
 ## Development Server
 
 Start the development server on http://localhost:3000
