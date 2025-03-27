@@ -4,12 +4,13 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "init-project-files": "nuxt-drupal-ce-init",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "start": "node .output/server/index.mjs",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && npm run init-project-files",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
@@ -19,6 +20,6 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "^2.2.4"
+    "nuxtjs-drupal-ce": "^2.2.6"
   }
 }
