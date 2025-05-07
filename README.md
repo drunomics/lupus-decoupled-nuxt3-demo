@@ -13,7 +13,7 @@ This is simply a new Nuxt 3 project with https://github.com/drunomics/nuxtjs-dru
 
 * [Launch it on StackBlitz](https://stackblitz.com/fork/github/drunomics/lupus-decoupled-nuxt3-demo/tree/main?file=nuxt.config.ts) and connect it to a backend (see manual setup steps).
 
-## Manual setup steps
+### Manual setup steps
 
 For stackblitz or local setup you'll get some network error until base URLs are set right. To do so:
 
@@ -22,8 +22,9 @@ For stackblitz or local setup you'll get some network error until base URLs are 
 2. Set the frontend base URL in Drupal at `/admin/config/system/lupus-decoupled/settings`, e.g. `https://nuxt-starter-wuxxcy--3000.local-corp.webcontainer.io`
 3. Test it. Best add some content nodes and some menu-items pointing to them. /node/1 of the backend is available under /node/1 in the frontend. You should see some naked frontend with menus, breadcrumbs & basic node-content (body field) working.
 
+## Usage
 
-## Setup
+### Setup
 
 Make sure to install the dependencies:
 
@@ -42,7 +43,7 @@ Add all [initial scaffold files](https://github.com/drunomics/nuxtjs-drupal-ce/t
 
 npm run init-project-files
 
-## Development Server
+### Development Server
 
 Start the development server on http://localhost:3000
 
@@ -50,7 +51,7 @@ Start the development server on http://localhost:3000
 npm run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
@@ -65,3 +66,12 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+## Development
+
+For quick development with a running backend, the following command may be used to point it against a pantheon
+lupus-decoupled demo site:
+
+   npm install
+   NUXT_PUBLIC_DRUPAL_CE_DRUPAL_BASE_URL=https://dev-lupus-decoupled-test.pantheonsite.io npm run dev
