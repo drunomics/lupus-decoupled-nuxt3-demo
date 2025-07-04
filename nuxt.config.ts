@@ -11,7 +11,6 @@ export default defineNuxtConfig({
 
   drupalCe: {
     drupalBaseUrl: 'https://lupus-decoupled.ddev.site',
-    exposeAPIRouteRules: true,
   },
 
   shadcn: {

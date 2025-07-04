@@ -7,19 +7,21 @@
     class="drupal-form"
   >
     <slot>
-      <component :is="useDrupalCe().renderCustomElements($attrs.content)" />
+      <component :is="useDrupalCe().renderCustomElements(content)" />
     </slot>
   </form>
 </template>
 
 <script setup lang="ts">
 defineProps<{
+  content?: CustomElementContent
   formId: string
   attributes: object
   method: string
 }>()
+
 defineSlots<{
-  default();
+  default(): any
 }>()
 </script>
 

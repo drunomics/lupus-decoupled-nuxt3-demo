@@ -1,14 +1,14 @@
 <template>
   <div class="node">
     <h2 v-if="title" class="mb-2 text-3xl font-semibold">Node: {{ title }}</h2>
-    <div class="prose max-w-none" v-if="$slots.image || $attrs.image">
+    <div v-if="$slots.image || image" class="prose max-w-none">
       <slot name="image">
-        <component :is="useDrupalCe().renderCustomElements($attrs.image)" />
+        <component :is="useDrupalCe().renderCustomElements(image)" />
       </slot>
     </div>
-    <div class="prose dark:prose-invert max-w-none" v-if="$slots.body || $attrs.body">
+    <div v-if="$slots.body || body" class="prose dark:prose-invert max-w-none">
       <slot name="body">
-        <component :is="useDrupalCe().renderCustomElements($attrs.body)" />
+        <component :is="useDrupalCe().renderCustomElements(body)" />
       </slot>
     </div>
   </div>
@@ -16,14 +16,17 @@
 
 <script setup lang="ts">
 defineSlots<{
-  body();
-  image();
+  body(): any
+  image(): any
 }>()
+
 defineProps<{
   title?: string;
   type?: string;
   created?: number | string;
   // Layout-builder support.
-  sections?: object;
+  sections?: CustomElementContent;
+  image?: CustomElementContent;
+  body?: CustomElementContent;
 }>()
 </script>

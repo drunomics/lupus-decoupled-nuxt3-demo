@@ -24,12 +24,12 @@
 const { renderCustomElements } = useDrupalCe()
 
 defineProps<{
-  layout: string;
-  settings: object;
-  content?: object;
-  first?: object;
-  second?: object;
-  third?: object;
-  fourth?: object;
+  layout: string
+  settings: object
+  content?: CustomElementContent
+  first?: CustomElementContent
+  second?: CustomElementContent
+  third?: CustomElementContent
+  fourth?: CustomElementContent
 }>()
 </script>
