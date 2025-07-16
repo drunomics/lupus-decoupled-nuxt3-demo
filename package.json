@@ -20,6 +20,6 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "^2.4.0"
+    "nuxtjs-drupal-ce": "^2.4.1"
   }
 }
