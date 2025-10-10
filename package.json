@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.0.0",
-    "nuxt": "^3.17.4",
+    "nuxt": "^3.19.3",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "nuxtjs-drupal-ce": "^2.4.1"
+    "nuxtjs-drupal-ce": "^2.4.2"
   }
 }
