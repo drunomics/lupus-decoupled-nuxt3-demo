@@ -1,73 +1,117 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
- 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
- 
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
- 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
- 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
- 
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
- 
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
- 
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
- 
-    --ring: 224 71.4% 4.1%;
- 
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
- 
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
- 
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
- 
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
- 
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
- 
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
- 
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
- 
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
- 
-    --ring: 216 12.2% 83.9%;
-  }
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(15.19% 0.0219 265.75);
+
+  --color-muted: oklch(96.72% 0.0043 264.53);
+  --color-muted-foreground: oklch(54.43% 0.0151 264.54);
+
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(15.19% 0.0219 265.75);
+
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(15.19% 0.0219 265.75);
+
+  --color-border: oklch(91.89% 0.0066 264.54);
+  --color-input: oklch(91.89% 0.0066 264.54);
+
+  --color-primary: oklch(22.01% 0.0456 265.75);
+  --color-primary-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-secondary: oklch(96.72% 0.0043 264.53);
+  --color-secondary-foreground: oklch(22.01% 0.0456 265.75);
+
+  --color-accent: oklch(96.72% 0.0043 264.53);
+  --color-accent-foreground: oklch(22.01% 0.0456 265.75);
+
+  --color-destructive: oklch(62.8% 0.2577 29.23);
+  --color-destructive-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-ring: oklch(15.19% 0.0219 265.75);
+
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
+  --radius-xl: calc(0.5rem + 4px);
 }
- 
+
+@theme {
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height);
+    }
+  }
+
+  @keyframes collapsible-up {
+    from {
+      height: var(--radix-collapsible-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-collapsible-down: collapsible-down 0.2s ease-in-out;
+  --animate-collapsible-up: collapsible-up 0.2s ease-in-out;
+}
+
+.dark {
+  --color-background: oklch(15.19% 0.0219 265.75);
+  --color-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-muted: oklch(25.04% 0.0462 264.54);
+  --color-muted-foreground: oklch(70.22% 0.0153 264.54);
+
+  --color-popover: oklch(15.19% 0.0219 265.75);
+  --color-popover-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-card: oklch(15.19% 0.0219 265.75);
+  --color-card-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-border: oklch(25.04% 0.0462 264.54);
+  --color-input: oklch(25.04% 0.0462 264.54);
+
+  --color-primary: oklch(98.04% 0.0048 264.54);
+  --color-primary-foreground: oklch(22.01% 0.0456 265.75);
+
+  --color-secondary: oklch(25.04% 0.0462 264.54);
+  --color-secondary-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-accent: oklch(25.04% 0.0462 264.54);
+  --color-accent-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-destructive: oklch(41.71% 0.1967 29.23);
+  --color-destructive-foreground: oklch(98.04% 0.0048 264.54);
+
+  --color-ring: oklch(85.42% 0.0193 264.54);
+}
+
 @layer base {
   * {
     @apply border-border;

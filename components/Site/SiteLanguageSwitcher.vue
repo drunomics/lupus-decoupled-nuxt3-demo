@@ -1,6 +1,9 @@
 <template>
   <div class="language-switcher">
-    <div v-for="availableLocale in availableLocales" :key="availableLocale">
+    <div
+      v-for="availableLocale in availableLocales"
+      :key="availableLocale"
+    >
       <a
         v-if="alternateLinkPath(availableLocale)"
         :href="alternateLinkPath(availableLocale)"
@@ -9,7 +12,9 @@
       >
         {{ availableLocale }}
       </a>
-      <div v-else>
+      <div
+        v-else
+      >
         {{ availableLocale }}
       </div>
     </div>
@@ -26,9 +31,7 @@ const availableLocales = computed(() => {
 
 // Get the path of the translated page from the 'alternate' link in the metatags.
 const alternateLinkPath = (langCode) => {
-  const alternateLink = getPage().value.metatags.link.find(
-    link => link.rel === 'alternate' && link.hreflang === langCode,
-  )
+  const alternateLink = getPage().value.metatags.link.find(link => link.rel === 'alternate' && link.hreflang === langCode)
   if (!alternateLink) {
     return
   }

@@ -1,14 +1,17 @@
 <template>
-  <div :class="['message', type]" @click="dismiss">
+  <div
+    :class="['message', type]"
+    @click="dismiss"
+  >
     <div v-html="message" />
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  type: string;
-  id: string;
-  message: string;
+  type: string
+  id: string
+  message: string
 }>()
 
 const emit = defineEmits(['dismiss'])

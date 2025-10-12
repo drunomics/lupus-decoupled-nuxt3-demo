@@ -1,15 +1,14 @@
 <template>
   <div class="node">
-    <h2 v-if="title" class="mb-2 text-3xl font-semibold">Node: {{ title }}</h2>
-    <div v-if="$slots.image || image" class="prose max-w-none">
-      <slot name="image">
-        <component :is="useDrupalCe().renderCustomElements(image)" />
-      </slot>
-    </div>
-    <div v-if="$slots.body || body" class="prose dark:prose-invert max-w-none">
-      <slot name="body">
-        <component :is="useDrupalCe().renderCustomElements(body)" />
-      </slot>
+    <h2 v-if="title">Node: {{ title }}</h2>
+    <slot name="image">
+      <component :is="useDrupalCe().renderCustomElements(image)" />
+    </slot>
+    <slot name="body">
+      <component :is="useDrupalCe().renderCustomElements(body)" />
+    </slot>
+    <div v-if="sections">
+      <component :is="useDrupalCe().renderCustomElements(sections)" />
     </div>
   </div>
 </template>

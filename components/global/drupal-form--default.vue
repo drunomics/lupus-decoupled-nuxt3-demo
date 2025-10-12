@@ -14,10 +14,10 @@
 
 <script setup lang="ts">
 defineProps<{
-  content?: CustomElementContent
   formId: string
   attributes: object
-  method: string
+  method: string,
+  content?: CustomElementContent
 }>()
 
 defineSlots<{
@@ -25,22 +25,19 @@ defineSlots<{
 }>()
 </script>
 
-<style lang="postcss">
+<style>
 form {
-  @apply py-6;
+  padding: 0 1rem;
 }
 
 label {
-  @apply block mb-1.5;
+  display: block;
+  margin-bottom: 0.325rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  @apply max-w-full p-2 mb-2 border border-border rounded-md bg-background text-foreground;
-}
-
-input[type="submit"] {
-  @apply bg-primary hover:bg-primary/90 text-background px-4 py-2 mt-1 rounded-md;
+input {
+  max-width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 </style>

@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   ],
 
   drupalCe: {
-    drupalBaseUrl: 'https://lupus-decoupled.ddev.site',
+    drupalBaseUrl: 'http://xb-dev.ddev.site',
   },
 
   shadcn: {
@@ -32,5 +32,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-09-10',
+  compatibilityDate: '2025-09-10',
 })
