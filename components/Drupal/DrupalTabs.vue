@@ -1,62 +1,36 @@
 <template>
-  <div class="drupal-tabs">
-    <ul v-if="tabs.primary" class="tabs primary">
-      <li v-for="tab in tabs.primary" :key="tab.url">
-        <nuxt-link
-          :href="tab.url"
-          tabindex="-1"
-          :class="{ 'is-active': tab.active }"
+  <div v-if="tabs.primary && tabs.primary.length > 0" class="drupal-tabs my-4">
+    <UiTabs :default-value="activeTab" class="w-full">
+      <UiTabsList>
+        <UiTabsTrigger
+          v-for="tab in tabs.primary"
+          :key="tab.url"
+          :value="tab.url"
+          as-child
         >
-          {{ tab.label }}
-          <span v-if="tab.active" class="visually-hidden"> (active tab) </span>
-        </nuxt-link>
-      </li>
-    </ul>
+          <nuxt-link :to="tab.url">
+            {{ tab.label }}
+          </nuxt-link>
+        </UiTabsTrigger>
+      </UiTabsList>
+    </UiTabs>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  tabs: object;
+const props = defineProps<{
+  tabs: {
+    primary?: Array<{
+      label: string
+      url: string
+      active?: boolean
+    }>
+  }
 }>()
+
+// Find the active tab URL
+const activeTab = computed(() => {
+  const active = props.tabs.primary?.find(tab => tab.active)
+  return active?.url || props.tabs.primary?.[0]?.url || ''
+})
 </script>
-
-<style lang="css" scoped>
-.drupal-tabs {
-  margin: 0 auto;
-  width: 100%;
-  padding: 1em;
-}
-
-.tabs {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-bottom: 1px solid #dedede;
-}
-
-a {
-  display: inline-block;
-  text-transform: uppercase;
-  padding: 0.3em 0.8em;
-  text-decoration: none;
-  color: #888;
-  border: 1px solid transparent;
-}
-
-a:hover {
-  border-bottom-color: #444;
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-</style>

@@ -1,5 +1,4 @@
-// This file is intentionally minimal to avoid circular import issues
-// Component variants are defined within their respective component files
+// Component exports - variants are defined within each component
 export { default as Button } from "./Button.vue"
 export { default as Breadcrumb } from "./Breadcrumb.vue"
 export { default as BreadcrumbEllipsis } from "./BreadcrumbEllipsis.vue"
@@ -26,3 +25,7 @@ export { default as SheetTitle } from "./SheetTitle.vue"
 export { default as SheetTrigger } from "./SheetTrigger.vue"
 export { default as ScrollArea } from "./ScrollArea.vue"
 export { default as ScrollBar } from "./ScrollBar.vue"
+export { default as Tabs } from "./Tabs.vue"
+export { default as TabsContent } from "./TabsContent.vue"
+export { default as TabsList } from "./TabsList.vue"
+export { default as TabsTrigger } from "./TabsTrigger.vue"
