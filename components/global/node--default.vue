@@ -1,6 +1,6 @@
 <template>
-  <div class="node">
-    <h2 v-if="title">Node: {{ title }}</h2>
+  <article class="node">
+    <h2 v-if="title" class="text-3xl font-bold tracking-tight mb-6">{{ title }}</h2>
     <slot name="image">
       <component :is="useDrupalCe().renderCustomElements(image)" />
     </slot>
@@ -10,7 +10,7 @@
     <div v-if="sections">
       <component :is="useDrupalCe().renderCustomElements(sections)" />
     </div>
-  </div>
+  </article>
 </template>
 
 <script setup lang="ts">
